@@ -2,9 +2,9 @@
   "name": "proyecto",
   "version": "1.0.0",
   "description": "",
-  "main": "p.js",
+  "main": "p1.js",
   "scripts": {
-    "start": "node p.js"
+    "start": "node p1.js"
   },
   "keywords": [],
   "author": "",
