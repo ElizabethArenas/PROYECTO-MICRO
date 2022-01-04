@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+
+<center><h1>PROYECTO FINAL MICROPROCESADORES </h1></center>
+<center><h2>USO DEL SENSOR DTH11  </h2></center>
+<center><h3>|</h3></center>
+<center><h3>|</h3></center>
+<center><h3>|</h3></center>
+<center><h3>|</h3></center>
+<center><h3>|</h3></center>
+
+<center><h2>MEDICION DE LAS VARIABLES</h2></center>
+
+<center><div id="data"></div></center>
+
+<div>
+<center><h2 id="counter">0</h2></center>
+</div>
+
+
+ 
+<body>
+
+<body style="background-color:rgb(58, 235, 235);">
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script> <!-- include socket.io client side script -->
+<script>
+var socket = io(); //load socket.io-client and connect to the host that serves the page
+
+var lightbox = document.getElementById("data");
+
+socket.on('data', function(data) {
+            
+  console.log(data);
+            
+  document.getElementById('counter').innerHTML=data; 
+
+});
+
+</script>
+
+<style>
+
+  #counter {
+    background-color:rgb(149, 245, 240);
+    width: 600px;
+    height: 50px;
+  }
+
+
+</style>
+
+</body>
+</html>
